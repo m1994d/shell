@@ -1,2 +1,2 @@
 # shell
-shell basic
+shell basic.

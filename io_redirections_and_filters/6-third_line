@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e 'Best School' > \\\*\\\\\'\"\Best\ \School\"\\\'\\\\\*\$\\\?\\\*\\\*\\\*\\\*\\\*\:\)
+tail -n+3 iacta | head -n 1

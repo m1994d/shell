@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Write a Bash script that displays its own PID.
+
+pkill -f 4-to_infinity_and_beyond

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Write a Bash script that displays its own PID.
+# shellcheck disable=SC2009
+
+ps afux | grep "bash"

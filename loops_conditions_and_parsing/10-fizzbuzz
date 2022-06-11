@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Displays numbers from 1 to 100 with FizzBuzz in mind
+
+for number in {1..100}; do
+    if [ $((number % 15)) -eq 0 ]; then
+        echo "FizzBuzz"
+    elif [ $((number % 3)) -eq 0 ]; then
+        echo "Fizz"
+    elif [ $((number % 5)) -eq 0 ]; then
+        echo "Buzz"
+    else
+        echo "$number"
+    fi
+done

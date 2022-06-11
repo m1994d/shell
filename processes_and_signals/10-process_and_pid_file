@@ -1,11 +1,23 @@
 #!/usr/bin/env bash
-# Bash script that displays To infinity and beyond indefinitely.
-echo "$$" > /var/run/holbertonscript.pid
+# Bash script that:
 
+# Creates the file /var/run/myscript.pid containing its PID
+echo $$ > /var/run/myscript.pid
+
+# Displays 'I hate the kill command' when receiving a SIGTERM signal
+trap "echo 'I hate the kill command'; \
+		 rm /var/run/myscript.pid; exit" SIGTERM
+
+# Displays 'Y U no love me?!' when receiving a SIGINT signal
+trap "echo 'Y U no love me?!'" SIGINT
+
+# Deletes the file /var/run/myscript.pid and 
+# terminates itself when receiving a SIGQUIT or SIGTERM signal
+trap "rm /var/run/myscript.pid; exit" SIGQUIT
+
+# Displays 'To infinity and beyond' indefinitely
 while true
 do
-    echo "To infinity and beyond"
-    trap "echo Y U no love me?!" SIGINT
-    trap "echo I hate the kill command; rm /var/run/holbertonscript.pid; exit" SIGTERM
-    sleep 2
-done
+		echo "To infinity and beyond"
+			sleep 2
+		done

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# script that displays the content of the file /etc/passwd.
+
+FILE='apache-access.log'
+awk '{ print $1 " " $9 }' $FILE | sort | uniq --count | sort --general-numeric-sort --reverse

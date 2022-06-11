@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# ls but using for loop
+
+files="$(ls)"
+for file in $files; do
+    name=${file##*-}
+    echo "$name"
+done
